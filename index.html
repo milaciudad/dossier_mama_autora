@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mila Ciudad - Enfermera, Autora, Cantante</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Montserrat -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Custom Tailwind Configuration */
+        :root {
+            --color-primary-bg: #F8F9FA; /* Gris muy claro, casi blanco */
+            --color-accent-slate: #A0B2C6; /* Azul Pizarra Suave */
+            --color-accent-gray: #BCC1C6; /* Gris Frío Medio */
+            --color-accent-lavender: #40E0D0; /* Azul Turquesa para mejor contraste */
+            --color-text-dark: #343A40; /* Gris oscuro */
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--color-primary-bg);
+            color: var(--color-text-dark);
+            overflow-x: hidden; /* Prevent horizontal scrolling */
+        }
+
+        h1, h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700; /* Bold */
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
+
+        h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700; /* Bold */
+        }
+
+        p, a, button {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 300; /* Light */
+        }
+
+        /* Custom styles for image hover effect */
+        .mila-image-container img {
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+
+        .mila-image-container:hover img {
+            transform: scale(1.02);
+            box-shadow: 0 0 15px rgba(160, 178, 198, 0.6); /* Subtle glow with accent color */
+        }
+
+        /* Custom styles for card lift effect */
+        .card-lift {
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+
+        .card-lift:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Custom button hover effect */
+        .btn-primary {
+            background-color: var(--color-accent-slate);
+            color: white;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--color-accent-lavender);
+        }
+
+        /* Specific style for the BLOG button */
+        .btn-blog {
+            background-color: white;
+            color: var(--color-text-dark); /* Grey text */
+            border: 2px solid var(--color-accent-slate); /* Optional: Add a border to make it stand out */
+            transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+        }
+
+        .btn-blog:hover {
+            background-color: var(--color-accent-lavender); /* Turquoise on hover */
+            color: white; /* White text on hover */
+            border-color: var(--color-accent-lavender); /* Change border color on hover */
+        }
+
+        /* Responsive Hero Section layout */
+        @media (max-width: 768px) {
+            .hero-section {
+                flex-direction: column;
+                text-align: center;
+            }
+            .hero-image-wrapper, .hero-content-wrapper {
+                width: 100%;
+            }
+            .hero-image-wrapper {
+                margin-bottom: 2rem;
+            }
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <!-- Sección 1: El Héroe - "En una vida hay muchas vidas" -->
+    <section class="hero-section flex flex-col md:flex-row items-center justify-center min-h-screen p-8 md:p-16 bg-[var(--color-primary-bg)]">
+        <div class="hero-image-wrapper w-full md:w-2/5 flex justify-center mb-8 md:mb-0 mila-image-container">
+            <!-- Placeholder para la imagen de Mila -->
+            <img src="https://i.ibb.co/PsqcxwG0/Air-Brush-20241027013329-1.png" alt="Mila Ciudad" class="max-w-full h-auto rounded-lg shadow-lg">
+        </div>
+        <div class="hero-content-wrapper w-full md:w-3/5 md:pl-16 text-center md:text-left">
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight text-[var(--color-text-dark)]">EN UNA VIDA HAY MUCHAS VIDAS</h1>
+            <p class="text-lg md:text-xl lg:text-2xl mb-8 font-light text-[var(--color-text-dark)]">Explora el universo de una enfermera, escritora y cantante unidas por la vocación de cuidar y comunicar.</p>
+            <a href="https://www.milaciudad.com/p/sobre-mi.html" target="_blank" class="btn-primary inline-block px-8 py-4 rounded-full text-lg font-medium shadow-md hover:shadow-lg transition-all duration-300">CONOCE MI HISTORIA</a>
+        </div>
+    </section>
+
+    <!-- Sección 2: Los Pilares - "Salud, Palabras y Melodías" -->
+    <section class="py-16 px-8 md:px-16 bg-[var(--color-primary-bg)]">
+        <h2 class="text-3xl md:text-4xl text-center mb-12 text-[var(--color-text-dark)]">SALUD, PALABRAS Y MELODÍAS</h2>
+        <div class="flex flex-col md:flex-row justify-center items-stretch gap-8">
+
+            <!-- Tarjeta 1: Salud -->
+            <div class="card-lift bg-white rounded-xl shadow-lg p-8 flex flex-col items-center text-center w-full md:w-1/3 max-w-sm border border-[var(--color-accent-gray)]">
+                <div class="text-[var(--color-accent-slate)] mb-6">
+                    <!-- Icono de corazón limpio (SVG) -->
+                    <svg class="w-20 h-20" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                    </svg>
+                </div>
+                <h3 class="text-2xl font-bold mb-4 text-[var(--color-text-dark)]">LA CIENCIA DE CUIDAR</h3>
+                <p class="text-md mb-6 font-light text-[var(--color-text-dark)]" style="font-size: 1.15rem;">Enfermera Especialista en Familiar y Comunitaria, mi vocación es el bienestar del cuerpo y el alma.</p>
+                <!-- Nuevo botón para Salud Activa -->
+                <a href="https://www.milaciudad.com/p/bienvenidos-salud-activa.html" target="_blank" class="btn-primary inline-block px-6 py-3 rounded-full text-md font-medium shadow-md hover:shadow-lg transition-all duration-300">SALUD ACTIVA</a>
+            </div>
+
+            <!-- Tarjeta 2: Palabras -->
+            <div class="card-lift bg-white rounded-xl shadow-lg p-8 flex flex-col items-center text-center w-full md:w-1/3 max-w-sm border border-[var(--color-accent-gray)]">
+                <div class="mb-6">
+                    <!-- Imagen de la portada del libro -->
+                    <img src="https://m.media-amazon.com/images/I/612COsDs+2L._SL1499_.jpg" alt="Portada de Rescatando Padres" class="rounded-lg shadow-md max-w-full h-auto">
+                </div>
+                <h3 class="text-2xl font-bold mb-4 text-[var(--color-text-dark)]">AUTORA DE "RESCATANDO PADRES"</h3>
+                <a href="https://amzn.eu/d/fK13qoo" target="_blank" class="btn-primary inline-block px-6 py-3 rounded-full text-md font-medium shadow-md hover:shadow-lg transition-all duration-300">DESCUBRE EL LIBRO</a>
+            </div>
+
+            <!-- Tarjeta 3: Melodías -->
+            <div class="card-lift bg-white rounded-xl shadow-lg p-8 flex flex-col items-center text-center w-full md:w-1/3 max-w-sm border border-[var(--color-accent-gray)]">
+                <div class="text-[var(--color-accent-slate)] mb-6">
+                    <!-- Icono de micrófono vintage (SVG) -->
+                    <svg class="w-20 h-20" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v3a3 3 0 01-3 3z"></path>
+                    </svg>
+                </div>
+                <h3 class="text-2xl font-bold mb-4 text-[var(--color-text-dark)]">LA VOZ COMO BÁLSAMO</h3>
+                <p class="text-md mb-6 font-light text-[var(--color-text-dark)]" style="font-size: 1.15rem;">'Canciones de mi vida'. Un refugio sonoro para dar voz a mi alma.</p>
+                <a href="https://www.youtube.com/@MilaCiudadCovers" target="_blank" class="btn-primary inline-block px-6 py-3 rounded-full text-md font-medium shadow-md hover:shadow-lg transition-all duration-300">ESCUCHA EN YOUTUBE</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección 3: El Manifiesto - Tu Lema -->
+    <section class="relative flex items-center justify-center min-h-[40vh] py-16 px-8 md:px-16 bg-gradient-to-br from-[var(--color-accent-slate)] via-[var(--color-accent-gray)] to-[var(--color-accent-lavender)] text-white text-center overflow-hidden">
+        <!-- Fondo de textura sutil (simulado con un gradiente suave) -->
+        <div class="absolute inset-0 opacity-20" style="background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB2aWV3Qm94PSIwIDAgODAwIDgwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxkZWZzPgogICAgICAgIDxmaWx0ZXIgaWQ9ImZpbHRlciIgeD0iLTUwJSIgeT0iLTUwJSIgd2lkdGg9IjIwMCUiIGhlaWdodD0iMjAwJSI+CiAgICAgICAgICAgIDxmZUZyYWN0YWxOb2lzZSB0eXBlPSJ0dXJidWxlbmNlIiBiYXNlRnJlcXVlbmN5PSIwLjA1IiBudW1PY3RhdmVzPSIyIiBzdGl0Y2hUaWxlcz0ic3RpdGNoIiByZXN1bHQ9ImZyYWN0YWxOb2lzZSIvPgogICAgICAgICAgICA8ZmVDb2xvck1hdHJpeCBpbiJmcmFjdGFsTm9pc2UiIHR5cGU9InNhYXR1cmF0ZSIgdmFsdWVzPSIxIiByZXN1bHQ9ImNvbG9yTWF0cml4Ii8+CiAgICAgICAgICAgIDxmZUNvbXBvc2l0ZSBpbj0iU291cmNlR3JhcGhpYyIgZmVDb21wb3NpdGU9Im92ZXJsaWdodCIgaW4yPSJjb2xvck1hdHJpeCIgcmVzdWx0PSJjb21wb3NpdGUiLz4KICAgICAgPC9maWx0ZXI+CiAgICA8L2RlZnM+CiAgICA8cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjRjZGOUZBIiBmaWx0ZXI9InVybCgjZmlsdGVyKSIvPgo8L3N2Zz4='); background-size: cover; background-position: center;"></div>
+        <div class="relative z-10">
+            <h2 class="text-5xl md:text-6xl lg:text-7xl font-bold mb-4 leading-tight text-white">NO TE DOBLEGUES</h2>
+            <p class="text-lg md:text-xl font-light text-white opacity-90">Mi recordatorio para afrontar la realidad con valentía y compartir esa fortaleza con quienes me leen.</p>
+            <!-- Nuevo botón para el Blog -->
+            <a href="https://www.milaciudad.com/p/por-que-este-blog.html" target="_blank" class="btn-blog inline-block px-8 py-4 rounded-full text-lg font-medium shadow-md hover:shadow-lg transition-all duration-300 mt-8">BLOG</a>
+        </div>
+    </section>
+
+    <!-- Footer (Pie de Página) -->
+    <footer class="py-12 px-8 md:px-16 bg-white text-center text-[var(--color-text-dark)]">
+        <div class="flex justify-center space-x-6 mb-6">
+            <!-- Iconos de redes sociales -->
+            <a href="https://www.instagram.com/mila.ciudad/" target="_blank" aria-label="Instagram" class="text-[var(--color-accent-slate)] hover:text-[var(--color-accent-lavender)] transition-colors duration-300">
+                <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7.5 2C4.467 2 2 4.467 2 7.5v9C2 19.533 4.467 22 7.5 22h9c3.033 0 5.5-2.467 5.5-5.5v-9C22 4.467 19.533 2 16.5 2h-9zm0 2h9c1.93 0 3.5 1.57 3.5 3.5v9c0 1.93-1.57 3.5-3.5 3.5h-9c-1.93 0-3.5-1.57-3.5-3.5v-9C4 5.57 5.57 4 7.5 4zm9.5 2c.828 0 1.5.672 1.5 1.5s-.672 1.5-1.5 1.5-1.5-.672-1.5-1.5.672-1.5 1.5-1.5zm-4.5 2c-2.485 0-4.5 2.015-4.5 4.5s2.015 4.5 4.5 4.5 4.5-2.015 4.5-4.5-2.015-4.5-4.5-4.5zm0 2c1.38 0 2.5 1.12 2.5 2.5s-1.12 2.5-2.5 2.5-2.5-1.12-2.5-2.5 1.12-2.5 2.5-2.5z"/>
+                </svg>
+            </a>
+            <a href="https://es.linkedin.com/in/milaciudadcion" target="_blank" aria-label="LinkedIn" class="text-[var(--color-accent-slate)] hover:text-[var(--color-accent-lavender)] transition-colors duration-300">
+                <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.761 0 5-2.239 5-5v-14c0-2.761-2.239-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" clip-rule="evenodd"></path>
+                </svg>
+            </a>
+            <a href="https://www.milaciudad.com/p/contacto_12.html" aria-label="Email" class="text-[var(--color-accent-slate)] hover:text-[var(--color-accent-lavender)] transition-colors duration-300">
+                <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M.05 3.555A2 2 0 012 2h20a2 2 0 011.95 1.555L12 13.25 0 3.555zM0 4.6V19a2 2 0 002 2h20a2 2 0 002-2V4.6l-12 9.7L0 4.6z"></path>
+                </svg>
+            </a>
+        </div>
+        <p class="text-sm font-light">&copy; 2025 Mila Ciudad. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        // JavaScript para los efectos de interactividad
+
+        // Establecer variables CSS personalizadas para Tailwind
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-bg': 'var(--color-primary-bg)',
+                        'accent-slate': 'var(--color-accent-slate)',
+                        'accent-gray': 'var(--color-accent-gray)',
+                        'accent-lavender': 'var(--color-accent-lavender)',
+                        'text-dark': 'var(--color-text-dark)',
+                    },
+                    fontFamily: {
+                        'montserrat': ['Montserrat', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>
+
